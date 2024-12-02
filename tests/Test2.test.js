@@ -9,6 +9,15 @@ describe('Check calculation', () => {
 
         await fireEvent.changeText(screen.getByPlaceholderText('Num1'), '2');
         await fireEvent.changeText(screen.getByPlaceholderText('Num2'), '2');
+
+        let resultFound = false;
+        try {
+            screen.getByText('4');
+            resultFound = true;
+        } catch (error) {}
+
+        if(resultFound) throw new Error('The result is shown before pressing the button');
+
         await fireEvent.press(screen.getByRole('button'));
 
         expect(screen.getByText('4')).toBeOnTheScreen();
