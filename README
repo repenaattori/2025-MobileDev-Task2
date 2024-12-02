@@ -1,0 +1,13 @@
+## Install dependencies
+npm install
+
+## Run tests to check if the answer is correct
+npm test
+
+## Task
+Create the following form in components/Calculator.js
+ - Two inputs for two numbers. Set placeholders to "Num1" and "Num2.
+ - Button for calculating the sum of the numbers.
+ - Text for showing just the sum of Num1 and Num2 when the button is pressed (show only number, no additional text)
+ 
+
