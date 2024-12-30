@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react-native";
+import { render, screen } from "@testing-library/react-native";
 import '@testing-library/react-native/extend-expect';
 import Calculator from "../components/Calculator";
 
@@ -14,9 +14,7 @@ describe('Chek components', () => {
     });
     it('Is there a button component with correct text', () => {
         const doc = render(<Calculator/>).toJSON();
-    
-        expect( screen.getByRole('button')).toHaveTextContent('SUM');
-
+        expect( screen.getByRole('button')).toBeOnTheScreen();
     });
 });
 

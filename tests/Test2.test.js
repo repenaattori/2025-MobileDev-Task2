@@ -23,6 +23,7 @@ describe('Check calculation', () => {
         expect(screen.getByText('4')).toBeOnTheScreen();
         
     });
+    
     it('Second sum test', async () => {
         render(<Calculator/>);
 
